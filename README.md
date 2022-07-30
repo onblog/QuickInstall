@@ -1,6 +1,8 @@
 # QuickInstallJava
 
-一行命令快速安装 Java 环境！
+一行命令快速安装 Java 环境 ！
+
+> 注意 jdk 文件夹将会被放置在当前目录
 
 # Linux
 
