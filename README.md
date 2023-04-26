@@ -15,5 +15,5 @@ cd /usr/local/lib && wget https://github.com/onblog/QuickInstallJava/releases/do
 apache-maven-3.8.7-bin.tar.gz
 
 ```shell
-cd /usr/local/lib && wget https://dlcdn.apache.org/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.tar.gz -O maven-temp.tar.gz && tar -zxvf maven-temp.tar.gz && rm -rf maven-temp.tar.gz && echo "export MAVEN_HOME=`pwd`/apache-maven-3.8.7" >> /etc/profile && echo 'export PATH=${MAVEN_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && mvn -v
+cd /usr/local/lib && wget https://github.com/onblog/QuickInstall/releases/download/Maven-3.8.8/apache-maven-3.8.8-bin.tar.gz -O maven-temp.tar.gz && tar -zxvf maven-temp.tar.gz && rm -rf maven-temp.tar.gz && echo "export MAVEN_HOME=`pwd`/apache-maven-3.8.8" >> /etc/profile && echo 'export PATH=${MAVEN_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && mvn -v
 ```
