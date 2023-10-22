@@ -17,3 +17,9 @@ apache-maven-3.8.1-bin.tar.gz
 ```shell
 cd /usr/local/lib && wget https://repo.huaweicloud.com/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz -O maven-temp.tar.gz && tar -zxvf maven-temp.tar.gz && rm -rf maven-temp.tar.gz && echo "export MAVEN_HOME=`pwd`/apache-maven-3.8.1" >> /etc/profile && echo 'export PATH=${MAVEN_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && mvn -v
 ```
+
+## 一行命令快速安装 MariaDB （替代MySQL）
+
+```shell
+sudo yum install -y mariadb-server mariadb-client && sudo systemctl start mariadb && sudo systemctl enable mariadb && sudo systemctl status mariadb && mysql -u root
+```
