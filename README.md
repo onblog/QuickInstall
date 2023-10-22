@@ -23,3 +23,4 @@ cd /usr/local/lib && wget https://repo.huaweicloud.com/apache/maven/maven-3/3.8.
 ```shell
 sudo yum install -y mariadb-server mariadb-client && sudo systemctl start mariadb && sudo systemctl enable mariadb && sudo systemctl status mariadb && mysql -u root
 ```
+更改密码：`SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_password');`
