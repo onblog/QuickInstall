@@ -18,9 +18,10 @@ apache-maven-3.8.1-bin.tar.gz
 cd /usr/local/lib && wget https://repo.huaweicloud.com/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz -O maven-temp.tar.gz && tar -zxvf maven-temp.tar.gz && rm -rf maven-temp.tar.gz && echo "export MAVEN_HOME=`pwd`/apache-maven-3.8.1" >> /etc/profile && echo 'export PATH=${MAVEN_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && mvn -v
 ```
 
-## 一行命令快速安装 MariaDB （替代MySQL）
+## 一行命令快速安装 Nginx 环境！
+
+nginx-1.14.0.tar.gz
 
 ```shell
-sudo yum install -y mariadb-server mariadb-client && sudo systemctl start mariadb && sudo systemctl enable mariadb && sudo systemctl status mariadb && mysql -u root
+wget http://nginx.org/download/nginx-1.14.0.tar.gz && tar -zxvf nginx-1.14.0.tar.gz && rm -rf nginx-1.14.0.tar.gz && cd nginx-1.14.0 && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && ./configure --with-http_ssl_module --prefix=`pwd`/nginx && make && make install && cd `pwd`/nginx/sbin && echo "export NGINX_HOME=`pwd`/nginx/" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v
 ```
-更改密码：`SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_password');`
