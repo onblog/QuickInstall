@@ -23,7 +23,7 @@ cd /usr/local/lib && wget https://repo.huaweicloud.com/apache/maven/maven-3/3.8.
 nginx-1.14.0.tar.gz
 
 ```shell
-wget http://nginx.org/download/nginx-1.14.0.tar.gz && tar -zxvf nginx-1.14.0.tar.gz && rm -rf nginx-1.14.0.tar.gz && cd nginx-1.14.0 && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && ./configure --with-http_ssl_module --prefix=`pwd`/nginx && make && make install && cd `pwd`/nginx/sbin && echo "export NGINX_HOME=`pwd`/nginx/" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v
+wget http://nginx.org/download/nginx-1.14.0.tar.gz && tar -zxvf nginx-1.14.0.tar.gz && rm -rf nginx-1.14.0.tar.gz && cd nginx-1.14.0 && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && ./configure --with-http_ssl_module --prefix=`pwd`/nginx && make && make install && cd `pwd`/nginx/sbin && echo "export NGINX_HOME=`pwd`/nginx" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v
 ```
 
 ## 一行命令快速安装 MySQL5.7
