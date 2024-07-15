@@ -26,6 +26,12 @@ nginx-1.14.0.tar.gz
 wget http://nginx.org/download/nginx-1.14.0.tar.gz && tar -zxvf nginx-1.14.0.tar.gz && rm -rf nginx-1.14.0.tar.gz && cd nginx-1.14.0 && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && ./configure --with-http_ssl_module --prefix=`pwd`/nginx && make && make install && cd `pwd`/nginx/sbin && echo "export NGINX_HOME=`pwd`/nginx" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v
 ```
 
+nginx-1.26.1.tar.gz （centos stream）
+
+```shell
+mkdir -p /home/work && cd /home/work && wget http://nginx.org/download/nginx-1.26.1.tar.gz && tar -zxvf nginx-1.26.1.tar.gz && rm -rf nginx-1.26.1.tar.gz && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && cd nginx-1.26.1 && ./configure --with-http_ssl_module --prefix=/home/work/nginx && make && make install && cd /home/work/nginx/sbin && echo "export NGINX_HOME=/home/work/nginx" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v
+```
+
 ## 一行命令快速安装 MySQL5.7
 
 [MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
