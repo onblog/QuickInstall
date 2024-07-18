@@ -1,6 +1,6 @@
 # QuickInstall
 
-建议使用 Red Hat 系列的 Linux 系统，比如 Centos（已经停止维护）、AlmaLinux。
+建议使用 Red Hat 系列的 Linux 系统，比如 Centos（已经停止维护）、AlmaLinux（🌟推荐） 和 Rocky Linux。
 
 ## 一行命令快速安装 Java 环境 ！
 
