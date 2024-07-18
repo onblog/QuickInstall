@@ -1,6 +1,6 @@
 # QuickInstall
 
-> 注意以下都会安装在当前目录，Centos7测试有效！
+建议使用 Red Hat 系列的 Linux 系统，比如 Centos（已经停止维护）、AlmaLinux。
 
 ## 一行命令快速安装 Java 环境 ！
 
@@ -47,7 +47,7 @@ mysql> update user set host='%' where user ='root';
 mysql> FLUSH PRIVILEGES;
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
 ```
-
+[参考](https://blog.csdn.net/h996666/article/details/80921913)
 
 ## 一行命令快速安装 MySQL5.7
 
