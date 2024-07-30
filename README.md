@@ -26,31 +26,12 @@ nginx-1.26.1.tar.gz
 mkdir -p /home/work && cd /home/work && wget http://nginx.org/download/nginx-1.26.1.tar.gz && tar -zxvf nginx-1.26.1.tar.gz && rm -rf nginx-1.26.1.tar.gz && yum -y install gcc automake autoconf libtool make && yum -y install gcc gcc-c++ && yum -y install pcre pcre-devel && yum -y install zlib zlib-devel && yum -y install gd-devel && yum -y install openssl openssl-devel && cd nginx-1.26.1 && ./configure --with-http_ssl_module --prefix=/home/work/nginx && make && make install && cd /home/work/nginx/sbin && echo "export NGINX_HOME=/home/work/nginx" >> /etc/profile && echo 'export PATH=${NGINX_HOME}/sbin:$PATH' >> /etc/profile && source /etc/profile && nginx -v && rm -rf /home/work/nginx-1.26.1
 ```
 
-## 一行命令快速安装 MySQL8.0
-
-OS：AlmaLinux 8
-
-```shell
-# 默认安装的是MySQL8.0
-yum install mysql-server -y
-
-# 无密码登入
-mysql -p
-
-# 修改密码
-mysql> alter user 'root'@'localhost' identified by '123456';
-mysql> flush privileges;
-
-# 设置远程访问，注意防火墙设置
-mysql> use mysql
-mysql> update user set host='%' where user ='root';
-mysql> FLUSH PRIVILEGES;
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
-```
-[参考](https://blog.csdn.net/h996666/article/details/80921913)
-
 ## 一行命令快速安装 MySQL5.7
 
 OS：Centos 7
 
 [MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
+
+OS：Centos 8
+
+[MySQL](https://www.onblogs.net/2024/07/29/Centos8%E6%88%96AlmaLinux8%E5%AE%89%E8%A3%85MySql5.7/)
