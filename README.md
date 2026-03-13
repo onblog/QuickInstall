@@ -46,6 +46,12 @@ OS：Centos 7
 yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 && yum install -y mysql-community-server && systemctl start mysqld.service && systemctl enable mysqld.service && cat /var/log/mysqld.log|grep 'A temporary password' && mysql -p
 ```
 
+改密码：
+
+set global validate_password_policy=0; 
+set global validate_password_length=1;
+set password=password("123456");
+
 [MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
 
 OS：Centos 8
