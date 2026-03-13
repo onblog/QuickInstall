@@ -65,8 +65,3 @@ OS：Centos 8
 yum install -y redis && sed -i 's/^requirepass.*/requirepass ""/' /etc/redis.conf && sed -i 's/^protected-mode.*/protected-mode no/' /etc/redis.conf && systemctl enable redis && systemctl start redis
 ```
 
-## 一行命令安装 Git
-
-```shell
-yum install -y wget gcc make openssl-devel curl-devel expat-devel gettext-devel zlib-devel && cd /usr/local/src && wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.0.tar.gz && tar -zxf git-2.45.0.tar.gz && cd git-2.45.0 && ./configure --prefix=/usr/local/git && make && make install && ln -sf /usr/local/git/bin/git /usr/bin/git && git --version && echo "高版本Git安装成功！当前版本：$(git --version)"
-```
