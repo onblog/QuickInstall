@@ -10,6 +10,12 @@ jdk-8u181-linux-x64.tar.gz
 cd /usr/local/lib && wget https://repo.huaweicloud.com/java/jdk/8u181-b13/jdk-8u181-linux-x64.tar.gz -O java-temp.tar.gz && tar -zxvf java-temp.tar.gz && rm -rf java-temp.tar.gz && echo "export JAVA_HOME=`pwd`/jdk1.8.0_181" >> /etc/profile && echo 'export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar' >> /etc/profile && echo 'export PATH=${JAVA_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && java -version
 ```
 
+amazon-corretto-17-x64-linux-jdk.tar.gz
+
+```shell
+cd /usr/local/lib && wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.tar.gz -O java-temp.tar.gz && tar -zxvf java-temp.tar.gz && rm -rf java-temp.tar.gz && echo "export JAVA_HOME=`pwd`/amazon-corretto-17.0.18.9.1-linux-x64" >> /etc/profile && echo 'export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar' >> /etc/profile && echo 'export PATH=${JAVA_HOME}/bin:$PATH' >> /etc/profile && source /etc/profile && java -version
+```
+
 ## 一行命令快速安装 Maven 环境！
 
 apache-maven-3.8.1-bin.tar.gz
