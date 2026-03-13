@@ -57,3 +57,10 @@ set password=password("123456");
 OS：Centos 8
 
 [MySQL](https://www.onblogs.net/2024/07/29/Centos8%E6%88%96AlmaLinux8%E5%AE%89%E8%A3%85MySql5.7/)
+
+
+## 一行命令安装Redis
+
+```shell
+yum install -y redis && sed -i 's/^requirepass.*/requirepass ""/' /etc/redis.conf && sed -i 's/^protected-mode.*/protected-mode no/' /etc/redis.conf && systemctl enable redis && systemctl start redis
+```
