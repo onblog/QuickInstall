@@ -42,6 +42,10 @@ mkdir -p /home/work && cd /home/work && wget http://nginx.org/download/nginx-1.2
 
 OS：Centos 7
 
+```shell
+yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 && yum install -y mysql-community-server && systemctl start mysqld.service && systemctl enable mysqld.service && cat /var/log/mysqld.log|grep 'A temporary password' && mysql -p
+```
+
 [MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
 
 OS：Centos 8
