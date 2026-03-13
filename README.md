@@ -1,6 +1,6 @@
 # QuickInstall
 
-建议使用 Red Hat 系列的 Linux 系统，比如 Centos（已经停止维护）、AlmaLinux（🌟推荐） 和 Rocky Linux。
+建议使用 Red Hat 系列的 Linux 系统，比如 Centos（已经停止维护）、AlmaLinux（🌟推荐） 和 Rocky Linux。 系统版本至少 8 起步，别安装 7 了，已经过时了
 
 ## 一行命令快速安装 Java 环境 ！
 
@@ -65,3 +65,8 @@ OS：Centos 8
 yum install -y redis && sed -i 's/^requirepass.*/requirepass ""/' /etc/redis.conf && sed -i 's/^protected-mode.*/protected-mode no/' /etc/redis.conf && systemctl enable redis && systemctl start redis
 ```
 
+## 一行命令安装 Node22
+
+```shell
+curl -sL https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-x64.tar.xz | tar -xJf - && sudo mv node-v22.0.0-linux-x64 /opt/nodejs && echo 'export PATH=/opt/nodejs/bin:$PATH' | sudo tee /etc/profile.d/nodejs.sh && source /etc/profile.d/nodejs.sh && node -v
+```
