@@ -56,6 +56,10 @@ set password=password("123456");
 
 OS：Centos 8
 
+```shell
+wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm && yum localinstall mysql57-community-release-el7-11.noarch.rpm -y && yum module disable mysql -y && yum install -y dnf-utils && yum-config-manager --enable mysql57-community && yum install -y mysql-community-server --nogpgcheck && systemctl enable mysqld && systemctl start mysqld && grep 'temporary password' /var/log/mysqld.log && mysql -uroot -p
+```
+
 [MySQL](https://blog-65j.pages.dev/2024/07/29/Centos8%E6%88%96AlmaLinux8%E5%AE%89%E8%A3%85MySql5.7/)
 
 
