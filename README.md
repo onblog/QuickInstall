@@ -40,28 +40,29 @@ mkdir -p /home/work && cd /home/work && wget http://nginx.org/download/nginx-1.2
 
 ## 一行命令快速安装 MySQL5.7
 
-OS：Centos 7
+**OS：Centos 7**
 
 ```shell
 yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm && rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022 && yum install -y mysql-community-server && systemctl start mysqld.service && systemctl enable mysqld.service && cat /var/log/mysqld.log|grep 'A temporary password' && mysql -p
 ```
 
-改密码：
+[参考 MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
 
-set global validate_password_policy=0; 
-set global validate_password_length=1;
-set password=password("123456");
-
-[MySQL](https://www.cnblogs.com/kevingrace/p/8340690.html)
-
-OS：Centos 8
+**OS：Centos 8**
 
 ```shell
 wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm && yum localinstall mysql57-community-release-el7-11.noarch.rpm -y && yum module disable mysql -y && yum install -y dnf-utils && yum-config-manager --enable mysql57-community && yum install -y mysql-community-server --nogpgcheck && systemctl enable mysqld && systemctl start mysqld && grep 'temporary password' /var/log/mysqld.log && mysql -uroot -p
 ```
 
-[MySQL](https://blog-65j.pages.dev/2024/07/29/Centos8%E6%88%96AlmaLinux8%E5%AE%89%E8%A3%85MySql5.7/)
+[参考 MySQL](https://blog-65j.pages.dev/2024/07/29/Centos8%E6%88%96AlmaLinux8%E5%AE%89%E8%A3%85MySql5.7/)
 
+复制密码后登录 MySQL 进行**改密码**：
+
+```shell
+set global validate_password_policy=0; 
+set global validate_password_length=1;
+set password=password("123456");
+```
 
 ## 一行命令安装 Redis
 
